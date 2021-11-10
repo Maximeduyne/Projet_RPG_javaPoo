@@ -19,8 +19,7 @@ public class Archetype {
             return name;
         }
 
-        public static int getAttack() {
-            return attack;
+        public static int getAttack() {return attack;
         }
 
         public static int getHealth() {
@@ -40,6 +39,14 @@ public class Archetype {
         System.out.println("Health : " + stats.getHealth() + "\n");
         System.out.println("Initities : " + stats.getInitities() + "\n");
         return "";
+    }
+
+
+    public static void player2() {
+        stats.name = "Player 2";
+        stats.attack = 10;
+        stats.health = 100;
+        stats.initities = 10;
     }
 
 }

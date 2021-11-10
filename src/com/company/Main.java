@@ -10,7 +10,7 @@ public class Main extends Archetype{
     public static void jeu(){
         System.out.println("Application has started");
         System.out.println("Choice : ");
-        System.out.println("1 : Choice / Modify Caracter");
+        System.out.println("1 : Choice / Modify Character");
         System.out.println("2 : Play");
         System.out.println("3 : Quit");
 
@@ -19,35 +19,36 @@ public class Main extends Archetype{
 
         switch (choice) {
             case 1:
-                System.out.println("1: Creation of the caracter");
-                System.out.println("2: Modification of the caracter");
-                Scanner nt = new Scanner(System.in);
+                System.out.println("1: Creation of the character");
+                System.out.println("2: Modification of the character");
+                new Scanner(System.in);
                 int create_modify = sc.nextInt();
-                switch (create_modify){
-                    case 1:
-                        System.out.println("Create Caracter");
+                switch (create_modify) {
+                    case 1 -> {
+                        System.out.println("Create Character");
                         Scanner name = new Scanner(System.in);
-                        String name_caracter = name.nextLine();
+                        String name_character = name.nextLine();
                         stats.getName();
                         Scanner attack = new Scanner(System.in);
-                        int attack_caracter = attack.nextInt();
+                        int attack_character = attack.nextInt();
                         stats.getAttack();
                         Scanner health = new Scanner(System.in);
-                        int health_caracter = health.nextInt();
+                        int health_character = health.nextInt();
                         stats.getHealth();
-                        Scanner initiaties = new Scanner(System.in);
-                        int initiaties_caracter = initiaties.nextInt();
+                        Scanner initiative = new Scanner(System.in);
+                        int initiative_character = initiative.nextInt();
                         stats.getInitities();
-
-                        System.out.println("You caracter is created"+" \n" +
-                                "The name is " + name_caracter + "\n" +
-                                "Attack = " + attack_caracter + "\n" +
-                                "Health = " + health_caracter + "\n" +
-                                "Initities = " + initiaties_caracter );
-                        break;
-                    case 2:
-                        System.out.println("Custom your Caracter already created");
-                        break;
+                        System.out.println("You character is created" + " \n" +
+                                "The name is " + name_character + "\n" +
+                                "Attack = " + attack_character + "\n" +
+                                "Health = " + health_character + "\n" +
+                                "Initiative = " + initiative_character);
+                        player2();
+                        int players_damage = health_character - attack_character;
+                        System.out.println("The player inflict  " + attack_character + "point of damage");
+                        System.out.println("The player has now " + players_damage + " pv");
+                    }
+                    case 2 -> System.out.println("Custom your Character already created");
                 }
                 break;
             case 2:
