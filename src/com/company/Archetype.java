@@ -50,16 +50,16 @@ public class Archetype {
         return null;
     }
 
-    public static boolean player2() {
-        return false;
+    public static String player2() {
+        return null;
     }
 
     public static void return_menu() {
-        System.out.println("Pour retourner au menu tapez : 10");
+        System.out.println("Pour retourner au menu tapez : 0");
         java.util.Scanner rt;
         rt = new Scanner(System.in);
         int retour = Integer.parseInt(rt.nextLine());
-        if (retour == 10) {
+        if (retour == 0) {
             Main.menu();
             Main.jeu();
             }

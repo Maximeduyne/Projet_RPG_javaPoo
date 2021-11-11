@@ -25,7 +25,8 @@ public class Main extends Archetype{
 
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
-        String player1 = player1();
+        String player1 = "";
+        String player2 = "";
         switch (choice) {
             case 1:
                 System.out.println("1: Creation of the character");
@@ -47,30 +48,60 @@ public class Main extends Archetype{
                     int characters = sc.nextInt();
                     if (characters ==1){
                         warrior.stats.warrior_class();
-                        player1 = "You character is created" + " \n" +
-                                "The name is " + name_character + "\n" +
-                                "Attack = " + warrior.stats.getAttack() + "\n" +
-                                "Health = " + warrior.stats.getHealth()+ "\n" +
-                                "Initiative = " + warrior.stats.getInitities() ;
-                        myList.add(player1);
+                        if (player1 == ""){
+                            player1 = "You character is created" + " \n" +
+                                    "The name is " + name_character + "\n" +
+                                    "Attack = " + warrior.stats.getAttack() + "\n" +
+                                    "Health = " + warrior.stats.getHealth()+ "\n" +
+                                    "Initiative = " + warrior.stats.getInitities() ;
+                            myList.add(player1);
+                        }
+                        else if (player2 ==""){
+                            player2 = "You character is created" + " \n" +
+                                    "The name is " + name_character + "\n" +
+                                    "Attack = " + warrior.stats.getAttack() + "\n" +
+                                    "Health = " + warrior.stats.getHealth()+ "\n" +
+                                    "Initiative = " + warrior.stats.getInitities() ;
+                            myList.add(player2);
+                        }
                     }
                     else if (characters ==2){
                         mage.stats.mage_class();
-                        player1 = "You character is created" + " \n" +
-                                "The name is " + name_character + "\n" +
-                                "Attack = " + mage.stats.getAttack() + "\n" +
-                                "Health = " + mage.stats.getHealth()+ "\n" +
-                                "Initiative = " + mage.stats.getInitities() ;
-                        myList.add(player1);
+                        if (player1 == ""){
+                            player1 = "You character is created" + " \n" +
+                                    "The name is " + name_character + "\n" +
+                                    "Attack = " + mage.stats.getAttack() + "\n" +
+                                    "Health = " + mage.stats.getHealth()+ "\n" +
+                                    "Initiative = " + mage.stats.getInitities() ;
+                            myList.add(player1);
+                        }
+                        else if (player2 ==""){
+                            player2 = "You character is created" + " \n" +
+                                    "The name is " + name_character + "\n" +
+                                    "Attack = " + mage.stats.getAttack() + "\n" +
+                                    "Health = " + mage.stats.getHealth()+ "\n" +
+                                    "Initiative = " + mage.stats.getInitities() ;
+                            myList.add(player2);
+                        }
                     }
                     else if (characters ==3){
                         thief.stats.thief_class();
-                        player1 = "You character is created" + " \n" +
-                                "The name is " + name_character + "\n" +
-                                "Attack = " + thief.stats.getAttack() + "\n" +
-                                "Health = " + thief.stats.getHealth()+ "\n" +
-                                "Initiative = " + thief.stats.getInitities() ;
-                        myList.add(player1);
+                        if (player1 ==""){
+                            player1 = "You character is created" + " \n" +
+                                    "The name is " + name_character + "\n" +
+                                    "Attack = " + thief.stats.getAttack() + "\n" +
+                                    "Health = " + thief.stats.getHealth()+ "\n" +
+                                    "Initiative = " + thief.stats.getInitities() ;
+                            myList.add(player1);
+                        }
+                        else if (player2 ==""){
+                            player2 = "You character is created" + " \n" +
+                                    "The name is " + name_character + "\n" +
+                                    "Attack = " + thief.stats.getAttack() + "\n" +
+                                    "Health = " + thief.stats.getHealth()+ "\n" +
+                                    "Initiative = " + thief.stats.getInitities() ;
+                            myList.add(player2);
+                        }
                     }
                     else if (characters == 4){
                         System.out.println("Warrior : ");
@@ -85,21 +116,17 @@ public class Main extends Archetype{
                     //FIGHT
                     boolean fight = true;
                     boolean win = false;
+
                     while (fight){
 
                         boolean choice_fight = false;
                         while (choice_fight){
-                            System.out.println("1 - Attack");
-                            int choice_fight2 = sc.nextInt();
-                            if (choice_fight2 == 1){
-                                stats.getAttack();
-                                int players_damage = stats.getHealth() - stats.getAttack();
-                                System.out.println("The player inflict  " + stats.getAttack() + "point of damage");
-                                System.out.println("The player has now " + players_damage + " pv");
+                            int players_damage = stats.getHealth() - stats.getAttack();
+                            System.out.println("The player inflict  " + stats.getAttack() + "point of damage");
+                            System.out.println("The player has now " + players_damage + " pv");
                             }
                         }
                     }
-                }
 
             case 2:
                 System.out.println("How To Play the Game ?");
