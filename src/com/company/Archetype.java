@@ -18,20 +18,21 @@ public class Archetype {
             this.initities = initities;
         }
 
+
         public static String getName() {
             return name;
         }
 
         public static int getAttack() {
-            return attack;
+            return stats.attack;
         }
 
         public static int getHealth() {
-            return health;
+            return stats.health;
         }
 
         public static int getInitities() {
-            return initities;
+            return stats.initities;
         }
 
     }
@@ -45,17 +46,18 @@ public class Archetype {
         return "";
     }
 
+    public static int player1() {
+        stats.attack = 40;
+        stats.health = 800;
+        stats.initities = 30;
+        return 0;
+    }
 
-    public static void player2() {
-        stats.name = "Player 2";
-        stats.attack = 10;
+    public static int player2() {
+        stats.attack = 20;
         stats.health = 100;
-        stats.initities = 10;
-
-        System.out.println(stats.name);
-        System.out.println(stats.attack);
-        System.out.println(stats.health);
-        System.out.println(stats.initities);
+        stats.initities = 20;
+        return 0;
     }
 
     public static void return_menu() {
@@ -66,6 +68,6 @@ public class Archetype {
         if (retour == 10) {
             Main.menu();
             Main.jeu();
+            }
         }
     }
-}

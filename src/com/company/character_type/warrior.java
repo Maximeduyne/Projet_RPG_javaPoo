@@ -1,39 +1,52 @@
 package com.company.character_type;
 
+
+import com.company.Archetype;
+
 public class warrior {
 
-    private String name;
-    private int attack;
-    private int health;
-    private int initities;
+    public static class stats {
 
-    public String Archetype_warrior(String name, int attack, int health, int initities){
+        private static String name;
+        private static int attack;
+        private static int health;
+        private static int initities;
 
-        this.name = "" + name;
-        this.attack = attack;
-        this.health = health;
-        this.initities = initities;
+        public stats(String name, int attack, int health, int initities) {
 
-        return name;
-    }
+        }
 
-    public String Archetype_thief(String name, int attack, int health, int initities){
 
-        this.name = "" + name;
-        this.attack = attack;
-        this.health = health;
-        this.initities = initities;
+        public static String getName() {
+            return name;
+        }
 
-        return name;
-    }
+        public static int getAttack() {
+            return stats.attack;
+        }
 
-    public String Archetype_mage(String name, int attack, int health, int initities){
+        public static int getHealth() {
+            return stats.health;
+        }
 
-        this.name = "" + name;
-        this.attack = attack;
-        this.health = health;
-        this.initities = initities;
+        public static int getInitities() {
+            return stats.initities;
+        }
 
-        return name;
+        public String toString() {
+            System.out.println("This is the caracter statistics : \n");
+            System.out.println("Name : " + warrior.stats.getName() + "\n");
+            System.out.println("Attack : " + warrior.stats.getAttack() + "\n");
+            System.out.println("Health : " + warrior.stats.getHealth() + "\n");
+            System.out.println("Initities : " + warrior.stats.getInitities() + "\n");
+            return "";
+        }
+
+        public static int warrior_class() {
+            stats.attack = 40;
+            stats.health = 800;
+            stats.initities = 30;
+            return 0;
+        }
     }
 }
