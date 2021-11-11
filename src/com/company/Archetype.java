@@ -46,18 +46,12 @@ public class Archetype {
         return "";
     }
 
-    public static int player1() {
-        stats.attack = 40;
-        stats.health = 800;
-        stats.initities = 30;
-        return 0;
+    public static String player1() {
+        return null;
     }
 
-    public static int player2() {
-        stats.attack = 20;
-        stats.health = 100;
-        stats.initities = 20;
-        return 0;
+    public static boolean player2() {
+        return false;
     }
 
     public static void return_menu() {

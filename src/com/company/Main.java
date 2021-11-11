@@ -25,13 +25,14 @@ public class Main extends Archetype{
 
         Scanner sc = new Scanner(System.in);
         int choice = sc.nextInt();
-
+        String player1 = player1();
         switch (choice) {
             case 1:
                 System.out.println("1: Creation of the character");
                 System.out.println("2: Fight");
                 new Scanner(System.in);
                 int create_fight = sc.nextInt();
+                List myList = new ArrayList();
                 if (create_fight == 1 ) {
                     System.out.println("Create Character");
                     System.out.println("Enter your name");
@@ -45,43 +46,41 @@ public class Main extends Archetype{
                     System.out.println("4 : Information of the characters");
                     int characters = sc.nextInt();
                     if (characters ==1){
-                        String perso_create;
                         warrior.stats.warrior_class();
-                        perso_create = "You character is created" + " \n" +
+                        player1 = "You character is created" + " \n" +
                                 "The name is " + name_character + "\n" +
                                 "Attack = " + warrior.stats.getAttack() + "\n" +
                                 "Health = " + warrior.stats.getHealth()+ "\n" +
                                 "Initiative = " + warrior.stats.getInitities() ;
-                        System.out.println(perso_create);
+                        myList.add(player1);
                     }
-                    if (characters ==2){
-                        String perso_create;
+                    else if (characters ==2){
                         mage.stats.mage_class();
-                        perso_create = "You character is created" + " \n" +
+                        player1 = "You character is created" + " \n" +
                                 "The name is " + name_character + "\n" +
                                 "Attack = " + mage.stats.getAttack() + "\n" +
                                 "Health = " + mage.stats.getHealth()+ "\n" +
                                 "Initiative = " + mage.stats.getInitities() ;
-                        System.out.println(perso_create);
+                        myList.add(player1);
                     }
-                    if (characters ==3){
-                        String perso_create;
+                    else if (characters ==3){
                         thief.stats.thief_class();
-                        perso_create = "You character is created" + " \n" +
+                        player1 = "You character is created" + " \n" +
                                 "The name is " + name_character + "\n" +
                                 "Attack = " + thief.stats.getAttack() + "\n" +
                                 "Health = " + thief.stats.getHealth()+ "\n" +
                                 "Initiative = " + thief.stats.getInitities() ;
-                        System.out.println(perso_create);
+                        myList.add(player1);
                     }
-                    if (characters == 4){
+                    else if (characters == 4){
                         System.out.println("Warrior : ");
                         System.out.println("Mage : ");
                         System.out.println("Thief : ");
                     }
+                    System.out.println(myList);
                     return_menu();
-
                 }
+
                 if (create_fight == 2) {
                     //FIGHT
                     boolean fight = true;
