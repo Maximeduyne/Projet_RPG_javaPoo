@@ -1,11 +1,14 @@
 package com.company;
 
+import java.util.Scanner;
+
+
 public class Archetype {
     public static class stats {
 
         private static String name;
         private static int attack;
-        private static int  health;
+        private static int health;
         private static int initities;
 
         public stats(String name, int attack, int health, int initities) {
@@ -19,7 +22,8 @@ public class Archetype {
             return name;
         }
 
-        public static int getAttack() {return attack;
+        public static int getAttack() {
+            return attack;
         }
 
         public static int getHealth() {
@@ -47,7 +51,21 @@ public class Archetype {
         stats.attack = 10;
         stats.health = 100;
         stats.initities = 10;
+
+        System.out.println(stats.name);
+        System.out.println(stats.attack);
+        System.out.println(stats.health);
+        System.out.println(stats.initities);
     }
 
+    public static void return_menu() {
+        System.out.println("Pour retourner au menu tapez : 10");
+        java.util.Scanner rt;
+        rt = new Scanner(System.in);
+        int retour = Integer.parseInt(rt.nextLine());
+        if (retour == 10) {
+            Main.menu();
+            Main.jeu();
+        }
+    }
 }
-
