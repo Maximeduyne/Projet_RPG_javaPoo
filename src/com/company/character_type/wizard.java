@@ -3,7 +3,12 @@ package com.company.character_type;
 
 import com.company.Archetype;
 
-public class mage {
+public class wizard extends Archetype {
+
+    public wizard(String name, int attack, int health, int initities) {
+        super(name, attack, health, initities);
+    }
+
 
     public static class stats {
 
@@ -11,10 +16,6 @@ public class mage {
         private static int attack;
         private static int health;
         private static int initities;
-
-        public stats(String name, int attack, int health, int initities) {
-        }
-
 
         public static String getName() {
             return name;
@@ -34,10 +35,10 @@ public class mage {
 
         public String toString() {
             System.out.println("This is the caracter statistics : \n");
-            System.out.println("Name : " + mage.stats.getName() + "\n");
-            System.out.println("Attack : " + mage.stats.getAttack() + "\n");
-            System.out.println("Health : " + mage.stats.getHealth() + "\n");
-            System.out.println("Initities : " + mage.stats.getInitities() + "\n");
+            System.out.println("Name : " + wizard.stats.getName() + "\n");
+            System.out.println("Attack : " + wizard.stats.getAttack() + "\n");
+            System.out.println("Health : " + wizard.stats.getHealth() + "\n");
+            System.out.println("Initities : " + wizard.stats.getInitities() + "\n");
             return "";
         }
 

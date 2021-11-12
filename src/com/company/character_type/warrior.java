@@ -3,7 +3,11 @@ package com.company.character_type;
 
 import com.company.Archetype;
 
-public class warrior {
+public class warrior extends Archetype{
+
+    public warrior(String name, int attack, int health, int initities) {
+        super(name, attack, health, initities);
+    }
 
     public static class stats {
 
@@ -11,10 +15,6 @@ public class warrior {
         private static int attack;
         private static int health;
         private static int initities;
-
-        public stats(String name, int attack, int health, int initities) {
-
-        }
 
 
         public static String getName() {
@@ -42,11 +42,11 @@ public class warrior {
             return "";
         }
 
-        public static int warrior_class() {
+        public static void warrior_class() {
+            stats.name ="";
             stats.attack = 40;
             stats.health = 800;
             stats.initities = 30;
-            return 0;
         }
     }
 }

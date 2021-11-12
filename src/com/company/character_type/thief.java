@@ -3,7 +3,11 @@ package com.company.character_type;
 
 import com.company.Archetype;
 
-public class thief {
+public class thief extends Archetype{
+
+    public thief(String name, int attack, int health, int initities) {
+        super(name, attack, health, initities);
+    }
 
     public static class stats {
 
@@ -11,10 +15,6 @@ public class thief {
         private static int attack;
         private static int health;
         private static int initities;
-
-        public stats(String name, int attack, int health, int initities) {
-
-        }
 
 
         public static String getName() {
